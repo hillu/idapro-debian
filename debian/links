@@ -1,0 +1,8 @@
+/usr/lib/idapro/idaq /usr/bin/idaq
+/usr/lib/idapro/idaq64 /usr/bin/idaq64
+/usr/lib/idapro/idal /usr/bin/idal
+/usr/lib/idapro/idal64 /usr/bin/idal64
+/usr/lib/idapro/qwingraph /usr/bin/qwingraph
+
+# /usr/lib/python2.7/plat-i386-linux-gnu /usr/lib/idapro/python/lib/python2.7/plat-i386-linux-gnu
+# /usr/lib/python2.7/lib-dynload /usr/lib/idapro/python/lib/python2.7/lib-dynload

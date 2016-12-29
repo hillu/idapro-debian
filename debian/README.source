@@ -1,0 +1,20 @@
+idapro for Debian
+-----------------
+
+The orig tarball was created by installing IDA Pro into a local
+directory, without Python, and calling debian/create-orig-tar.sh from
+within that directory.
+
+Unpacking non-interactively can be done using:
+
+
+
+    sh idapronl_160808_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.run \
+        --installpassword xxxxxxxxxxxx \
+        --prefix `pwd`/idapro-6.95.160808 \
+        --mode unattended \
+        --localpython 0
+
+ -- Hilko Bengen <bengen@hilluzination.de>  Thu, 29 Dec 2016 22:59:57 +0100
+
+

@@ -1,0 +1,37 @@
+*.so /usr/lib/idapro
+*.int /usr/lib/idapro
+*.png /usr/lib/idapro
+
+libQt*.so.* /usr/lib/idapro
+
+assistant /usr/lib/idapro
+
+idacolor.cf /usr/lib/idapro
+ida.hlp /usr/lib/idapro
+
+idal* /usr/lib/idapro
+idaq* /usr/lib/idapro
+
+qidahelp* /usr/lib/idapro
+
+license.txt /usr/lib/idapro
+
+qwingraph /usr/lib/idapro
+
+xterm-scokey /usr/lib/idapro
+xt-sco.key /usr/lib/idapro
+
+accessible /usr/lib/idapro
+cfg /usr/lib/idapro
+dbgsrv /usr/lib/idapro
+idc /usr/lib/idapro
+ids /usr/lib/idapro
+loaders /usr/lib/idapro
+platforms /usr/lib/idapro
+plugins /usr/lib/idapro
+procs /usr/lib/idapro
+python /usr/lib/idapro
+# python/*.py /usr/lib/idapro/python
+# python/PyQt5 /usr/lib/idapro/python
+sig /usr/lib/idapro
+til /usr/lib/idapro

@@ -1,0 +1,21 @@
+Source: idapro
+Section: utils
+Priority: optional
+Maintainer: Hilko Bengen <bengen@hilluzination.de>
+Build-Depends: debhelper (>=9), dh-python2,
+ python-dev,
+ libdirectfb-dev,
+ libfontconfig1-dev,
+ libice-dev,
+ libsm-dev,
+ libx11-xcb-dev,
+ libxi-dev,
+Standards-Version: 3.9.6
+Homepage: https://www.hex-rays.com/products/ida/
+
+Package: idapro
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: The Interactive Disassembler
+ IDA is a Windows, Linbux, and Mac OS X hosted multi-processor
+ disassembler and debugger.

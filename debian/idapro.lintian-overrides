@@ -1,0 +1,17 @@
+# Ignore the GDB servers
+idapro: binary-from-other-architecture
+idapro: program-not-linked-against-libc usr/lib/idapro/dbgsrv/android_server_nonpie
+idapro: statically-linked-binary usr/lib/idapro/dbgsrv/armuclinux_server
+
+# No source, no choice
+idapro: hardening-no-relro usr/lib/idapro/libclp.so
+
+# Need to use upstream's Qt build, no choice
+idapro: embedded-library usr/lib/idapro/libQt5Core.so.5: zlib
+idapro: embedded-library usr/lib/idapro/libQt5Gui.so.5: libpng
+idapro: embedded-library usr/lib/idapro/libQt5Sql.so.5: sqlite
+idapro: embedded-library usr/lib/idapro/loaders/omf64.llx64: zlib
+
+idapro: image-file-in-usr-lib
+idapro: binary-without-manpage
+
