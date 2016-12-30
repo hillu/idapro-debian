@@ -1,37 +1,43 @@
-An idapro .deb ppackage for use on Debian/Ubuntu
-------------------------------------------------
+An idapro .deb package for use on Debian/Ubuntu
+-----------------------------------------------
 
 As of version 6.95, IDA Pro is only available for the i386
 architecture. The files in this repository can be used to create an
 easily installable .deb package from the installer's contents that
 uses the system's 32-bit Python libraries.
 
-1. Use the installer to unpack the contents into a temporary working
-directory (prefix), e.g.:
+1. Use the IDA Pro installer to unpack the contents into a temporary
+   working directory (prefix), e.g.:
 
-    sh idapronl_160808_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.run \
-        --installpassword xxxxxxxxxxxx \
-        --prefix `pwd`/idapro-6.95.160808 \
-        --mode unattended \
-        --localpython 0
+        sh idapronl_160808_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.run \
+            --installpassword xxxxxxxxxxxx \
+            --prefix `pwd`/idapro-6.95.160808 \
+            --mode unattended \
+            --localpython 0
 
-2. Copy the `debian/` directory to the working directory.
+
+2. Copy the contents of this directory into the working directory,
+   edit the version number in `debian/changelog` if necessary.
 
 3. Build the package by running `dpkg-buildpackage -b` in an i386
-environment. An i386 chroot environment can be used for this.
+   environment. An i386 chroot can be used for this.
 
 4. On the target machine, add i386 as a secondary architecture if
-necessary:
+   necessary:
 
-    dpkg --add-architecture i386
-    apt-get update
+        dpkg --add-architecture i386
+        apt-get update
 
 5. On the target machine, install the .deb package. This will likely
-fail due to missing dependencies. Those can be added using apt in a
-second step.
+   fail due to missing dependencies. Those can be added using apt in a
+   second step.
 
-    dpkg -i idapro_6.95.160808-1_i386.deb
-    apt-get -f install
+        dpkg -i idapro_6.95.160808-1_i386.deb
+        apt-get -f install
+    
+An alternative would be to simply use apt-get to install the package
+from a local APT repository if possible. However, be careful to make
+sure that the package is not made available to the general public.
 
 The .deb package does not contain the `ida.key` file that has been
 added to the installer. It must be copied to `~/.idapro` for the user
